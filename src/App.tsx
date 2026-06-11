@@ -7,6 +7,7 @@ function App() {
 
   const keyDownHandler = (event: KeyboardEvent) => {
     if ((event.metaKey || event.ctrlKey) && event.key === "k") {
+      event.preventDefault();
       setIsOpen(true);
     } else if (event.key === "Escape") setIsOpen(false);
   };
