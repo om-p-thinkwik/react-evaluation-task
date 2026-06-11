@@ -115,7 +115,7 @@ const CommandPalette = () => {
             <div className="p-6 text-center text-gray-500">
               Start typing to search commands...
             </div>
-          ) : searchItems.length >= 0 ? (
+          ) : searchItems && searchItems.length !== 0 ? (
             Object.entries(groupedItems).map(([group, items]) => (
               <div key={group}>
                 <div className="px-4 py-2 text-xs uppercase font-semibold text-gray-500">
